@@ -5,6 +5,11 @@
     <title>WebKit Storage Access API Test (main window)</title>
   </head>
   <body>
+    <script>
+      window.addEventListener("message", (event) => {
+        console.info(event.data);
+      }, false);
+    </script>
     <iframe
       sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin" src="https://storage-access-api-iframes.github.io/iframe-01.html"></iframe>
   </body>
